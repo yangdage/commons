@@ -1,4 +1,4 @@
-## markdowns自动生成悬浮菜单
+## markdown自动生成悬浮菜单
 
 - 在编辑好的markdown文档最后引入这个js文件
 - 使用个人喜欢的解释器解析该markdown文件，推荐使用**sublimeb**文本编辑器，自动生成对应html文档
