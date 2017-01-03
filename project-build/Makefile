@@ -18,7 +18,7 @@ ifeq (${CONTEXT_PROD},$(shell kubectl config current-context))
 	PROJECT = ${PROJECT_PROD}
 endif
 
-.PHONY: help ctx chctx-dev chctx-prod build docker kube all
+.PHONY: help ctx ccdev ccprod build docker kube all
 
 # 帮助信息
 help: ctx
@@ -29,11 +29,11 @@ ctx:
 	@echo current context `kubectl config current-context`
 
 # 切换上下文执行环境到本地
-cc-dev:
+ccdev:
 	@kubectl config use-context ${CONTEXT}
 
 # 切换上下文执行环境到正式
-cc-prod:
+ccprod:
 	@kubectl config use-context ${CONTEXT_PROD}
 
 # 编译任务
@@ -61,9 +61,9 @@ define _help
 	@echo
 	@echo "ctx        show current context"
 	@echo
-	@echo "cc-dev     change context to dev"
+	@echo "ccdev      change context to dev"
 	@echo
-	@echo "cc-prod    change context to prod"
+	@echo "ccprod     change context to prod"
 	@echo
 	@echo "build      gulp build + go build"
 	@echo
