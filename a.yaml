@@ -1,2 +1,3 @@
 server:
-        test: false
+        test: aaaa
+        test2: false
